@@ -1,6 +1,7 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace STT_Poc
 {
@@ -10,22 +11,11 @@ namespace STT_Poc
         {
             InitializeComponent();
 
+            AppCenter.Start("android=0722a3e4-5805-4006-9cc1-44343a3b8656;" +
+                            "ios={Your iOS App secret here}",
+                            typeof(Analytics), typeof(Crashes));
+
             MainPage = new MainPage();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
         }
     }
 }

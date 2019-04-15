@@ -2,13 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:STT_Poc"
-             x:Class="STT_Poc.MainPage">
+             x:Class="STT_Poc.MainPage"
+             Visual="Material"
+             Padding="20">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+        <Button x:Name="btnError" Text="Error" BackgroundColor="Red" />
+        
+        <Button x:Name="btnError1" Text="Error" BackgroundColor="Yellow" />
+
+        <Button x:Name="btnEvents" Text="Events 1" BackgroundColor="Green" />
+        
+        <Button x:Name="btnEvents1" Text="Events 2" BackgroundColor="Blue" />
+
     </StackLayout>
 
 </ContentPage>
